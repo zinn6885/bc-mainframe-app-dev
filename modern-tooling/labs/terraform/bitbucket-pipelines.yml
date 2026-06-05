@@ -1,0 +1,19 @@
+image: hashicorp/terraform:1.9
+
+pipelines:
+  custom:
+    deploy-grafana-lab:
+      - step:
+          name: Terraform Apply
+          script:
+            - cd terraform
+            - terraform init
+            - terraform apply -auto-approve -var="key_name=$KEY_NAME"
+
+    destroy-grafana-lab:
+      - step:
+          name: Terraform Destroy
+          script:
+            - cd terraform
+            - terraform init
+            - terraform destroy -auto-approve -var="key_name=$KEY_NAME"
