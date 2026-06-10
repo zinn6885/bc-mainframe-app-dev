@@ -6,6 +6,12 @@
 
 ### [COBOL Labs](labs/COBOL_Labs.md)
 
+### MongoDB Day 1 Labs (ETL, Migration & Hybrid Integration)
+
+- [Lab 1: MongoDB Atlas Fundamentals](labs/mongodb-day1/Lab_01_MongoDB_Atlas_Fundamentals/README.md)
+- [Lab 2: Data Migration Simulation](labs/mongodb-day1/Lab_02_Data_Migration_Simulation/README.md)
+- [Lab 3: Hybrid Data Integration Pipeline](labs/mongodb-day1/Lab_03_Hybrid_Data_Integration_Pipeline/README.md)
+
 ## Sample Code 
 
 ### [Job Control Language (JCL) and z/OS Utilities samples](jcl/JCL_Samples.md)
@@ -31,8 +37,11 @@
 ## OpenShift 
 [OpenShift clusters](/openshift/bastion-list.md)  
 
-#### [Connect to the Cluster](openshift/connect-cluster/index.md)
-#### [Explore OpenShift Resources](openshift/openshift-resources/index.md)   
-#### [Deploying Microservices](openshift/openshift-microservices/index.md)      
-#### [Configmaps and Secrets](openshift/openshift-configmaps-secrets/index.md)      
-#### [OpenShift Scheduling](openshift/openshift-scheduling/index.md)      
+### [Connect to the Cluster](openshift/connect-cluster/index.md)
+### [Explore OpenShift Resources](openshift/openshift-resources/index.md)   
+### [Deploying Microservices](openshift/openshift-microservices/index.md)      
+### [Configmaps and Secrets](openshift/openshift-configmaps-secrets/index.md)      
+### [OpenShift Scheduling](openshift/openshift-scheduling/index.md)      
+
+## Data Platforms
+### [MongoDB](data_platforms/mongodb-day1/)   

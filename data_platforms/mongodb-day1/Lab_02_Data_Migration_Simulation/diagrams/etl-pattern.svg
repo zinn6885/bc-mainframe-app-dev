@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 96" width="520" role="img" aria-labelledby="title desc">
+  <title id="title">ETL Pattern</title>
+  <desc id="desc">Extract, Transform, Load data flow from Oracle CSV to MongoDB Atlas.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#00684A"/>
+    </marker>
+  </defs>
+  <style>
+    .box { fill:#fff; stroke:#00684A; stroke-width:1.5; }
+    .t { font:600 12px Arial,sans-serif; fill:#001E2B; }
+    .s { font:10px Arial,sans-serif; fill:#5C6C75; }
+    .l { font:600 10px Arial,sans-serif; fill:#00684A; }
+    .arr { stroke:#00684A; stroke-width:1.5; fill:none; marker-end:url(#ah); }
+  </style>
+  <rect x="8" y="8" width="118" height="44" rx="6" class="box"/>
+  <text x="67" y="28" text-anchor="middle" class="t">EXTRACT</text>
+  <text x="67" y="42" text-anchor="middle" class="s">(Source)</text>
+
+  <rect x="201" y="8" width="118" height="44" rx="6" class="box"/>
+  <text x="260" y="28" text-anchor="middle" class="t">TRANSFORM</text>
+  <text x="260" y="42" text-anchor="middle" class="s">(Cleanse)</text>
+
+  <rect x="394" y="8" width="118" height="44" rx="6" class="box"/>
+  <text x="453" y="28" text-anchor="middle" class="t">LOAD</text>
+  <text x="453" y="42" text-anchor="middle" class="s">(Target)</text>
+
+  <line x1="128" y1="30" x2="193" y2="30" class="arr"/>
+  <line x1="321" y1="30" x2="386" y2="30" class="arr"/>
+
+  <text x="67" y="68" text-anchor="middle" class="l">Oracle / CSV</text>
+  <text x="260" y="68" text-anchor="middle" class="l">Python Code</text>
+  <text x="453" y="68" text-anchor="middle" class="l">MongoDB Atlas</text>
+</svg>

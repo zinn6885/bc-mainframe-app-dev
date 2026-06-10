@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" width="420" role="img" aria-labelledby="title desc">
+  <title id="title">Complete Hybrid Pipeline</title>
+  <desc id="desc">Batch load, API enrichment, and CDC trigger flow.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#00684A"/>
+    </marker>
+  </defs>
+  <style>
+    .frame { fill:#F4FBF6; stroke:#00684A; stroke-width:1.5; }
+    .hdr { fill:#00684A; }
+    .ht { font:600 11px Arial,sans-serif; fill:#fff; }
+    .box { fill:#fff; stroke:#00684A; stroke-width:1.5; }
+    .data { fill:#E8F5E9; stroke:#00684A; stroke-width:1.2; }
+    .trigger { fill:#FFF8E1; stroke:#F5A623; stroke-width:1.5; stroke-dasharray:4 3; }
+    .t { font:600 9px Arial,sans-serif; fill:#001E2B; }
+    .b { font:8px Arial,sans-serif; fill:#5C6C75; }
+    .l { font:8px Consolas,monospace; fill:#00684A; }
+    .flow { font:8px Arial,sans-serif; fill:#001E2B; }
+    .arr { stroke:#00684A; stroke-width:1.2; fill:none; marker-end:url(#ah); }
+  </style>
+  <rect x="4" y="4" width="412" height="292" rx="8" class="frame"/>
+  <rect x="4" y="4" width="412" height="24" rx="8" class="hdr"/>
+  <rect x="4" y="20" width="412" height="8" class="hdr"/>
+  <text x="210" y="19" text-anchor="middle" class="ht">COMPLETE HYBRID PIPELINE</text>
+
+  <rect x="145" y="34" width="130" height="20" rx="4" class="data"/>
+  <text x="210" y="48" text-anchor="middle" class="l">historical_orders.csv</text>
+  <line x1="210" y1="56" x2="210" y2="66" class="arr"/>
+
+  <rect x="40" y="68" width="88" height="34" rx="5" class="box"/>
+  <text x="84" y="84" text-anchor="middle" class="t">batch_load.py</text>
+  <text x="84" y="96" text-anchor="middle" class="b">Batch</text>
+
+  <rect x="166" y="68" width="88" height="34" rx="5" class="box"/>
+  <text x="210" y="84" text-anchor="middle" class="t">orders</text>
+  <text x="210" y="96" text-anchor="middle" class="b">batch + CDC</text>
+
+  <rect x="292" y="68" width="88" height="34" rx="5" class="box"/>
+  <text x="336" y="84" text-anchor="middle" class="t">cdc_simulate.py</text>
+  <text x="336" y="96" text-anchor="middle" class="b">CDC</text>
+
+  <line x1="130" y1="85" x2="160" y2="85" class="arr"/>
+  <line x1="256" y1="85" x2="286" y2="85" class="arr"/>
+
+  <line x1="210" y1="104" x2="210" y2="114" class="arr"/>
+
+  <rect x="166" y="116" width="88" height="34" rx="5" class="box"/>
+  <text x="210" y="132" text-anchor="middle" class="t">api_enrich.py</text>
+  <text x="210" y="144" text-anchor="middle" class="b">API</text>
+
+  <line x1="256" y1="133" x2="286" y2="133" class="arr"/>
+
+  <rect x="292" y="116" width="88" height="34" rx="5" class="box"/>
+  <text x="336" y="132" text-anchor="middle" class="t">enriched_orders</text>
+  <text x="336" y="144" text-anchor="middle" class="b">Enriched</text>
+
+  <line x1="210" y1="152" x2="210" y2="162" class="arr"/>
+  <text x="248" y="160" class="b">external API</text>
+
+  <rect x="166" y="164" width="88" height="34" rx="5" class="box"/>
+  <text x="210" y="180" text-anchor="middle" class="t">Customer API</text>
+  <text x="210" y="192" text-anchor="middle" class="b">simulated</text>
+
+  <rect x="24" y="212" width="372" height="68" rx="6" class="trigger"/>
+  <text x="210" y="232" text-anchor="middle" class="t">CDC TRIGGER</text>
+  <text x="210" y="252" text-anchor="middle" class="flow">New order insert</text>
+  <text x="210" y="268" text-anchor="middle" class="flow">update_daily_summary() → daily_summary</text>
+</svg>
