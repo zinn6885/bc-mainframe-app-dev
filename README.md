@@ -12,6 +12,11 @@
 - [Lab 2: Data Migration Simulation](labs/mongodb-day1/Lab_02_Data_Migration_Simulation/README.md)
 - [Lab 3: Hybrid Data Integration Pipeline](labs/mongodb-day1/Lab_03_Hybrid_Data_Integration_Pipeline/README.md)
 
+### Production Support Day 2 Labs
+
+- [Lab 1: Incident Management & Ticket Lifecycle](labs/production-support-day2/Lab_01_Incident_Management_Ticket_Lifecycle/README.md)
+- [Lab 2: Linux System Debugging & Root Cause Analysis](labs/production-support-day2/Lab_02_Linux_Debugging_Root_Cause_Analysis/README.md)
+
 ## Sample Code 
 
 ### [Job Control Language (JCL) and z/OS Utilities samples](jcl/JCL_Samples.md)
@@ -44,4 +49,5 @@
 ### [OpenShift Scheduling](openshift/openshift-scheduling/index.md)      
 
 ## Data Platforms
-### [MongoDB](data_platforms/mongodb-day1/)   
+### [MongoDB Day 1](data_platforms/mongodb-day1/)
+### [Production Support Day 2](data_platforms/production-support-day2/)

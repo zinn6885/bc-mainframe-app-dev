@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 340" width="560" role="img" aria-labelledby="title desc">
+  <title id="title">Lab 3 Architecture</title>
+  <desc id="desc">EC2 metrics flow to CloudWatch, then export to Excel for SLA reporting and postmortem.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#00684A"/>
+    </marker>
+  </defs>
+  <style>
+    .frame { fill:#F4FBF6; stroke:#00684A; stroke-width:1.5; }
+    .hdr { fill:#00684A; }
+    .ht { font:600 12px Arial,sans-serif; fill:#fff; }
+    .box { fill:#fff; stroke:#00684A; stroke-width:1.5; }
+    .aws { fill:#E8F5E9; stroke:#00684A; stroke-width:1.2; stroke-dasharray:6 4; }
+    .t { font:600 11px Arial,sans-serif; fill:#001E2B; }
+    .b { font:9px Arial,sans-serif; fill:#5C6C75; }
+    .arr { stroke:#00684A; stroke-width:1.5; fill:none; marker-end:url(#ah); }
+  </style>
+
+  <rect x="8" y="8" width="544" height="324" rx="8" class="frame"/>
+  <rect x="8" y="8" width="544" height="26" rx="8" class="hdr"/>
+  <rect x="8" y="26" width="544" height="8" class="hdr"/>
+  <text x="280" y="26" text-anchor="middle" class="ht">AWS CLOUD</text>
+
+  <rect x="28" y="44" width="504" height="268" rx="6" class="aws"/>
+
+  <rect x="48" y="60" width="464" height="72" rx="6" class="box"/>
+  <text x="280" y="80" text-anchor="middle" class="t">EC2 Instance (Lab 2)</text>
+  <text x="280" y="96" text-anchor="middle" class="b">payment-processor service</text>
+  <text x="280" y="110" text-anchor="middle" class="b">CloudWatch Agent installed</text>
+  <text x="280" y="124" text-anchor="middle" class="b">Sends metrics: CPU, Memory, Custom errors</text>
+
+  <line x1="280" y1="134" x2="280" y2="152" class="arr"/>
+
+  <rect x="48" y="154" width="464" height="72" rx="6" class="box"/>
+  <text x="280" y="174" text-anchor="middle" class="t">Amazon CloudWatch</text>
+  <text x="280" y="190" text-anchor="middle" class="b">Metrics collected</text>
+  <text x="280" y="204" text-anchor="middle" class="b">Dashboard created</text>
+  <text x="280" y="218" text-anchor="middle" class="b">Alarms configured</text>
+
+  <line x1="280" y1="228" x2="280" y2="246" class="arr"/>
+
+  <rect x="48" y="248" width="464" height="88" rx="6" class="box"/>
+  <text x="280" y="268" text-anchor="middle" class="t">Excel (Local)</text>
+  <text x="280" y="284" text-anchor="middle" class="b">Export data from CloudWatch</text>
+  <text x="280" y="298" text-anchor="middle" class="b">Calculate MTTR, MTBF, Availability</text>
+  <text x="280" y="312" text-anchor="middle" class="b">Create SLA dashboard and write postmortem and runbook</text>
+</svg>

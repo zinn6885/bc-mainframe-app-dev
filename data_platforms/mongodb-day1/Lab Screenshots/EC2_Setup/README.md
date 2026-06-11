@@ -25,16 +25,16 @@ Place restored or re-captured images in this folder using these exact names:
 
 ## Original filenames (before rename)
 
-These were captured on **2026-06-08** in **ca-central-1** and renamed in the parent `Lab Screenshots` folder. They were removed during lab cleanup and must be **re-captured or restored from backup**:
+These were captured on **2026-06-08** in **us-east-1** and renamed in the parent `Lab Screenshots` folder. They were removed during lab cleanup and must be **re-captured or restored from backup**:
 
 | Restored name (use above) | Original capture file |
 |---------------------------|------------------------|
-| `Lab02_Step_0.1_Launch_EC2_Name_and_AMI.png` | `screencapture-ca-central-1-console-aws-amazon-ec2-home-2026-06-08-21_41_45.png` |
-| `Lab02_Step_0.2_Launch_EC2_Instance_Type_and_Key.png` | `screencapture-ca-central-1-console-aws-amazon-ec2-home-2026-06-08-23_22_55.png` |
-| `Lab02_Step_0.3_Launch_EC2_Network_and_Storage.png` | `screencapture-ca-central-1-console-aws-amazon-ec2-home-2026-06-08-21_44_12.png` |
+| `Lab02_Step_0.1_Launch_EC2_Name_and_AMI.png` | `screencapture-us-east-1-console-aws-amazon-ec2-home-2026-06-08-21_41_45.png` |
+| `Lab02_Step_0.2_Launch_EC2_Instance_Type_and_Key.png` | `screencapture-us-east-1-console-aws-amazon-ec2-home-2026-06-08-23_22_55.png` |
+| `Lab02_Step_0.3_Launch_EC2_Network_and_Storage.png` | `screencapture-us-east-1-console-aws-amazon-ec2-home-2026-06-08-21_44_12.png` |
 | `Lab02_Step_0.4_Launch_EC2_Review_and_Launch.png` | `Screenshot 2026-06-08 214515.png` |
-| `Lab02_Step_0.5_EC2_Instance_Running.png` | `screencapture-ca-central-1-console-aws-amazon-ec2-home-2026-06-08-21_45_47.png` |
-| `Lab02_Step_0.6_Edit_Security_Group_Outbound.png` | `screencapture-ca-central-1-console-aws-amazon-ec2-home-2026-06-08-23_02_25.png` |
+| `Lab02_Step_0.5_EC2_Instance_Running.png` | `screencapture-us-east-1-console-aws-amazon-ec2-home-2026-06-08-21_45_47.png` |
+| `Lab02_Step_0.6_Edit_Security_Group_Outbound.png` | `screencapture-us-east-1-console-aws-amazon-ec2-home-2026-06-08-23_02_25.png` |
 | `Lab02_Step_0.7_EC2_Instance_Connect_Button.png` | `Lab02_Step_1.1_Launch_EC2_Training_Lab.png` (renamed) |
 | `Lab02_Step_0.8_EC2_Instance_Connect_Terminal.png` | `Screenshot 2026-06-08 232856.png` |
 
