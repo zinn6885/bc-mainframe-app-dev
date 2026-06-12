@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480">
+  <title>Lab 2 Auto Scaling Architecture</title>
+  <desc>Application Load Balancer, target group, and Auto Scaling Group across two private subnets in different AZs.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#00684A"/>
+    </marker>
+  </defs>
+
+  <rect x="10" y="10" width="700" height="460" rx="8" fill="#F4FBF6" stroke="#00684A" stroke-width="2"/>
+  <rect x="10" y="10" width="700" height="36" rx="8" fill="#00684A"/>
+  <text x="360" y="34" text-anchor="middle" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="13" font-weight="600">Lab1-VPC - Auto Scaling and High Availability (Lab 2)</text>
+
+  <rect x="260" y="48" width="200" height="36" rx="6" fill="#FFFFFF" stroke="#00684A" stroke-width="1.2"/>
+  <text x="360" y="70" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">Internet</text>
+
+  <rect x="180" y="100" width="360" height="56" rx="6" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.5"/>
+  <text x="360" y="122" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">ASG-ALB (Application Load Balancer)</text>
+  <text x="360" y="138" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Public-Subnet-B (1b) + Public-Subnet-C (1c) - HTTP:80</text>
+
+  <rect x="240" y="176" width="240" height="44" rx="6" fill="#FFFFFF" stroke="#00684A" stroke-width="1.2"/>
+  <text x="360" y="196" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">ASG-TG (Target Group)</text>
+  <text x="360" y="210" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Health check: HTTP / - 200 OK</text>
+
+  <rect x="28" y="248" width="320" height="130" rx="6" fill="#FFF3E0" stroke="#E65100" stroke-width="1.5"/>
+  <text x="188" y="268" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">Private-Subnet-B - 10.0.2.0/24 - us-east-1b</text>
+  <rect x="48" y="284" width="280" height="52" rx="4" fill="#FFFFFF" stroke="#00684A" stroke-width="1.2"/>
+  <text x="188" y="306" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">EC2 Web Server 1</text>
+  <text x="188" y="322" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Web-SG - Apache - user data bootstrap</text>
+  <text x="188" y="362" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Private-RT - NAT Gateway</text>
+
+  <rect x="372" y="248" width="320" height="130" rx="6" fill="#FFF3E0" stroke="#E65100" stroke-width="1.5"/>
+  <text x="532" y="268" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">Private-Subnet-C - 10.0.4.0/24 - us-east-1c</text>
+  <rect x="392" y="284" width="280" height="52" rx="4" fill="#FFFFFF" stroke="#00684A" stroke-width="1.2"/>
+  <text x="532" y="306" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">EC2 Web Server 2</text>
+  <text x="532" y="322" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Web-SG - Apache - user data bootstrap</text>
+  <text x="532" y="362" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Private-RT - NAT Gateway</text>
+
+  <rect x="28" y="396" width="664" height="58" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5"/>
+  <text x="360" y="418" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">WebServer-ASG - Launch Template: WebServer-LT</text>
+  <text x="360" y="434" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Min: 2 | Desired: 2 | Max: 6 | Scale-on-CPU 70% | ELB health checks | Auto-healing</text>
+
+  <line x1="360" y1="84" x2="360" y2="100" stroke="#00684A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <line x1="360" y1="156" x2="360" y2="176" stroke="#00684A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <line x1="360" y1="220" x2="188" y2="248" stroke="#00684A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <line x1="360" y1="220" x2="532" y2="248" stroke="#00684A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+</svg>

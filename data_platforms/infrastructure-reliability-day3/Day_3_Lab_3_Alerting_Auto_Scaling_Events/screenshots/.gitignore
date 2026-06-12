@@ -1,0 +1,4 @@
+# Participant screenshot PNGs stay local — see Lab Screenshots Day 3/Lab 3/
+*.png
+*.jpg
+*.jpeg

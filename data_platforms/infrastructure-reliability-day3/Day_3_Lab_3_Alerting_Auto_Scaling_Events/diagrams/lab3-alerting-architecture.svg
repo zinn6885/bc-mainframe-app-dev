@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520">
+  <title>Lab 3 ASG Alerting Architecture</title>
+  <desc>Auto Scaling Group events flow through EventBridge and CloudWatch to SNS email alerts, with optional Lambda formatting.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#00684A"/>
+    </marker>
+  </defs>
+
+  <rect x="10" y="10" width="700" height="500" rx="8" fill="#F4FBF6" stroke="#00684A" stroke-width="2"/>
+  <rect x="10" y="10" width="700" height="36" rx="8" fill="#00684A"/>
+  <text x="360" y="34" text-anchor="middle" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="13" font-weight="600">Lab 3 - Alerting on Auto Scaling Events</text>
+
+  <rect x="28" y="52" width="664" height="72" rx="6" fill="#FFF3E0" stroke="#E65100" stroke-width="1.5"/>
+  <text x="360" y="76" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">WebServer-ASG (from Lab 2)</text>
+  <text x="360" y="94" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Min 2 | Desired 2 | Max 6 | EC2 instances in private subnets</text>
+  <text x="360" y="110" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Launch / Terminate lifecycle events</text>
+
+  <rect x="28" y="148" width="320" height="120" rx="6" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.5"/>
+  <text x="188" y="170" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">Amazon EventBridge</text>
+  <rect x="48" y="184" width="130" height="44" rx="4" fill="#FFFFFF" stroke="#00684A" stroke-width="1.2"/>
+  <text x="113" y="202" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">Launch Rule</text>
+  <text x="113" y="216" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Launch Successful</text>
+  <rect x="198" y="184" width="130" height="44" rx="4" fill="#FFFFFF" stroke="#00684A" stroke-width="1.2"/>
+  <text x="263" y="202" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">Terminate Rule</text>
+  <text x="263" y="216" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Terminate Successful</text>
+  <text x="188" y="252" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Filter: AutoScalingGroupName = WebServer-ASG</text>
+
+  <rect x="372" y="148" width="320" height="120" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5"/>
+  <text x="532" y="170" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">Amazon CloudWatch</text>
+  <rect x="392" y="184" width="130" height="44" rx="4" fill="#FFFFFF" stroke="#00684A" stroke-width="1.2"/>
+  <text x="457" y="202" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">Scale-Out Alarm</text>
+  <text x="457" y="216" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Desired &gt; 2</text>
+  <rect x="542" y="184" width="130" height="44" rx="4" fill="#FFFFFF" stroke="#00684A" stroke-width="1.2"/>
+  <text x="607" y="202" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">Scale-In Alarm</text>
+  <text x="607" y="216" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Desired &lt; 2</text>
+  <text x="532" y="252" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Dashboard: ASG-Monitoring-Dashboard</text>
+
+  <rect x="180" y="296" width="360" height="56" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5"/>
+  <text x="360" y="318" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">SNS Topic: ASG-Alerts</text>
+  <text x="360" y="336" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Standard topic - Email subscription (confirmed)</text>
+
+  <rect x="260" y="376" width="200" height="44" rx="6" fill="#FFFFFF" stroke="#00684A" stroke-width="1.2"/>
+  <text x="360" y="404" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">Email Alerts</text>
+
+  <rect x="28" y="440" width="320" height="56" rx="6" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="188" y="462" text-anchor="middle" fill="#001E2B" font-family="Arial,sans-serif" font-size="11" font-weight="600">Lambda FormatASGAlerts (Optional)</text>
+  <text x="188" y="480" text-anchor="middle" fill="#5C6C75" font-family="Arial,sans-serif" font-size="9">Formats EventBridge events for SNS email</text>
+
+  <line x1="200" y1="124" x2="140" y2="148" stroke="#00684A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <line x1="360" y1="124" x2="532" y2="148" stroke="#00684A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <line x1="188" y1="268" x2="280" y2="296" stroke="#00684A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <line x1="532" y1="268" x2="440" y2="296" stroke="#00684A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <line x1="360" y1="352" x2="360" y2="376" stroke="#00684A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <line x1="120" y1="268" x2="120" y2="440" stroke="#00684A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <line x1="188" y1="468" x2="260" y2="324" stroke="#00684A" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+</svg>

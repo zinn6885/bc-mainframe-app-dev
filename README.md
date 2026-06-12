@@ -49,5 +49,6 @@
 ### [OpenShift Scheduling](openshift/openshift-scheduling/index.md)      
 
 ## Data Platforms
-### [MongoDB Day 1](data_platforms/mongodb-day1/)
-### [Production Support Day 2](data_platforms/production-support-day2/)
+### [MongoDB Day 1](data_platforms/mongodb-day1/)  
+### [Production Support Day 2](data_platforms/production-support-day2/)  
+### [Infrastructure Reliability](data_platforms/infrastructure-reliability-day3)  
